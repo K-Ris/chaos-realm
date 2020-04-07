@@ -9,4 +9,7 @@ public class MobEntities {
 
     @ObjectHolder("chaosrealm:weirdmob")
     public static EntityType<WeirdMobEntity> WEIRDMOB;
+
+    @ObjectHolder("chaosrealm:icespider")
+    public static EntityType<WeirdMobEntity> ICESPIDER;
 }

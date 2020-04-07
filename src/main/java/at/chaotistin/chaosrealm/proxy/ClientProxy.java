@@ -12,6 +12,7 @@ public class ClientProxy implements IProxy{
     public void init() {
         RenderingRegistry.registerEntityRenderingHandler(IceSkeletonEntity.class, IceSkeletonRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(WeirdMobEntity.class, WeirdMobRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(IceSpiderEntity.class, IceSpiderRenderer::new);
     }
 
     @Override

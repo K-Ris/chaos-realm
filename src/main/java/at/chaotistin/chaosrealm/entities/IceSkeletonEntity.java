@@ -8,10 +8,14 @@ import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
 
-public class IceSkeletonEntity extends CreatureEntity {
-    public IceSkeletonEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
+public class IceSkeletonEntity extends MonsterEntity {
+    public IceSkeletonEntity(EntityType<? extends MonsterEntity> type, World worldIn) {
         super(type, worldIn);
     }
 
@@ -28,7 +32,9 @@ public class IceSkeletonEntity extends CreatureEntity {
         super.registerAttributes();
         this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(10.0d);
         this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.1d);
+    }
 
-
+    protected void setEquipmentBasedOnDifficulty(DifficultyInstance difficulty) {
+        this.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(Items.IRON_SWORD));
     }
 }

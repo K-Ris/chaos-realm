@@ -1,9 +1,11 @@
 package at.chaotistin.chaosrealm;
 
 import at.chaotistin.chaosrealm.entities.IceSkeletonEntity;
+import at.chaotistin.chaosrealm.entities.IceSpiderEntity;
 import at.chaotistin.chaosrealm.entities.WeirdMobEntity;
 import at.chaotistin.chaosrealm.items.GlassSword;
 import at.chaotistin.chaosrealm.items.IceSkeletonEggItem;
+import at.chaotistin.chaosrealm.items.IceSpiderEggItem;
 import at.chaotistin.chaosrealm.items.WeirdMobEggItem;
 import at.chaotistin.chaosrealm.proxy.ClientProxy;
 import at.chaotistin.chaosrealm.proxy.IProxy;
@@ -72,6 +74,7 @@ public class Main
             event.getRegistry().register(new GlassSword());
             event.getRegistry().register(new IceSkeletonEggItem());
             event.getRegistry().register(new WeirdMobEggItem());
+            event.getRegistry().register(new IceSpiderEggItem());
         }
         @SubscribeEvent
         public static void onEntityRegistry(final RegistryEvent.Register<EntityType<?>> event) {
@@ -83,8 +86,13 @@ public class Main
                     .size(1, 1)
                     .setShouldReceiveVelocityUpdates(false)
                     .build("weirdmob").setRegistryName(MODID, "weirdmob"));
+            event.getRegistry().register(EntityType.Builder.create(IceSpiderEntity::new, EntityClassification.CREATURE)
+                    .size(1, 1)
+                    .setShouldReceiveVelocityUpdates(false)
+                    .build("icespider").setRegistryName(MODID, "icespider"));
 
         }
+
 
     }
 }
