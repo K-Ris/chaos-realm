@@ -56,27 +56,27 @@ public class IceSpiderModel<T extends Entity> extends EntityModel<T> {
 
         leg3 = new RendererModel(this);
         leg3.setRotationPoint(4.0F, 15.0F, 4.0F);
-        leg3.cubeList.add(new ModelBox(leg3, 0, 36, -23.0F, -1.0F, -1.0F, 16, 2, 2, 0.0F, false));
+        leg3.cubeList.add(new ModelBox(leg3, 0, 36, -25.0F, -5.0F, -1.0F, 16, 2, 2, 0.0F, false));
 
         leg4 = new RendererModel(this);
         leg4.setRotationPoint(-4.0F, 15.0F, 4.0F);
-        leg4.cubeList.add(new ModelBox(leg4, 35, 4, 7.0F, -1.0F, -1.0F, 16, 2, 2, 0.0F, false));
+        leg4.cubeList.add(new ModelBox(leg4, 35, 4, 9.0F, -5.0F, -1.0F, 16, 2, 2, 0.0F, false));
 
         leg5 = new RendererModel(this);
         leg5.setRotationPoint(4.0F, 15.0F, 0.0F);
-        leg5.cubeList.add(new ModelBox(leg5, 35, 0, -23.0F, -1.0F, -1.0F, 16, 2, 2, 0.0F, false));
+        leg5.cubeList.add(new ModelBox(leg5, 35, 0, -25.0F, -5.0F, -1.0F, 16, 2, 2, 0.0F, false));
 
         leg6 = new RendererModel(this);
         leg6.setRotationPoint(-4.0F, 15.0F, 0.0F);
-        leg6.cubeList.add(new ModelBox(leg6, 30, 26, 7.0F, -1.0F, -1.0F, 16, 2, 2, 0.0F, false));
+        leg6.cubeList.add(new ModelBox(leg6, 30, 26, 9.0F, -5.0F, -1.0F, 16, 2, 2, 0.0F, false));
 
         leg7 = new RendererModel(this);
         leg7.setRotationPoint(4.0F, 15.0F, -5.0F);
-        leg7.cubeList.add(new ModelBox(leg7, 30, 30, -23.0F, -2.0F, -1.0F, 16, 3, 3, 0.0F, false));
+        leg7.cubeList.add(new ModelBox(leg7, 30, 30, -25.0F, -5.0F, 5.0F, 16, 3, 3, 0.0F, false));
 
         leg8 = new RendererModel(this);
         leg8.setRotationPoint(-4.0F, 15.0F, -5.0F);
-        leg8.cubeList.add(new ModelBox(leg8, 23, 20, 7.0F, -2.0F, -1.0F, 16, 3, 3, 0.0F, false));
+        leg8.cubeList.add(new ModelBox(leg8, 23, 20, 9.0F, -5.0F, 5.0F, 16, 3, 3, 0.0F, false));
     }
 
     @Override
@@ -130,12 +130,12 @@ public class IceSpiderModel<T extends Entity> extends EntityModel<T> {
         this.leg8.rotateAngleY += -f5;
         //this.field_78210_j.rotateAngleY += f6;
         //this.field_78211_k.rotateAngleY += -f6;
-        this.leg3.rotateAngleZ += f7;
-        this.leg4.rotateAngleZ += -f7;
-        this.leg5.rotateAngleZ += f8;
-        this.leg6.rotateAngleZ += -f8;
-        this.leg7.rotateAngleZ += f9;
-        this.leg8.rotateAngleZ += -f9;
+        //this.leg3.rotateAngleZ += f7;
+        //this.leg4.rotateAngleZ += -f7;
+        //this.leg5.rotateAngleZ += f8;
+        //this.leg6.rotateAngleZ += -f8;
+        //this.leg7.rotateAngleZ += f9;
+        //this.leg8.rotateAngleZ += -f9;
         //this.field_78210_j.rotateAngleZ += f10;
         //this.field_78211_k.rotateAngleZ += -f10;
     }
