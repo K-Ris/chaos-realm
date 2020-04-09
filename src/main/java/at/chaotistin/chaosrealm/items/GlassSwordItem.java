@@ -4,8 +4,8 @@ import at.chaotistin.chaosrealm.setup.ModSetup;
 import net.minecraft.item.SwordItem;
 
 public class
-GlassSword extends SwordItem {
-    public GlassSword() {
+GlassSwordItem extends SwordItem {
+    public GlassSwordItem() {
         super(ToolMaterialList.GLASS, 3, -2.4f, (new Properties().group(ModSetup.itemGroup)));
         setRegistryName("glasssword");
     }

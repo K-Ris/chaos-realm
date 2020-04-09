@@ -1,14 +1,12 @@
 package at.chaotistin.chaosrealm;
 
-import at.chaotistin.chaosrealm.entities.*;
 import at.chaotistin.chaosrealm.items.*;
 import at.chaotistin.chaosrealm.proxy.ClientProxy;
 import at.chaotistin.chaosrealm.proxy.IProxy;
 import at.chaotistin.chaosrealm.proxy.ServerProxy;
+import at.chaotistin.chaosrealm.registries.MobEntities;
 import at.chaotistin.chaosrealm.registries.SoundsHandler;
 import at.chaotistin.chaosrealm.setup.ModSetup;
-import net.minecraft.entity.EntityClassification;
-import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.util.SoundEvent;
@@ -63,7 +61,7 @@ public class Main
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties()
                     .group(setup.itemGroup);
-            event.getRegistry().register(new GlassSword());
+            event.getRegistry().register(new GlassSwordItem());
             event.getRegistry().register(new IceSkeletonEggItem());
             event.getRegistry().register(new WeirdMobEggItem());
             event.getRegistry().register(new IceSpiderEggItem());
@@ -71,18 +69,9 @@ public class Main
         }
         @SubscribeEvent
         public static void onEntityRegistry(final RegistryEvent.Register<EntityType<?>> event) {
-            event.getRegistry().register(EntityType.Builder.create(IceSkeletonEntity::new, EntityClassification.CREATURE)
-                    .size(1, 1)
-                    .setShouldReceiveVelocityUpdates(false)
-                    .build("iceskeleton").setRegistryName(MODID, "iceskeleton"));
-            event.getRegistry().register(EntityType.Builder.create(WeirdMobEntity::new, EntityClassification.CREATURE)
-                    .size(1, 1)
-                    .setShouldReceiveVelocityUpdates(false)
-                    .build("weirdmob").setRegistryName(MODID, "weirdmob"));
-            event.getRegistry().register(EntityType.Builder.create(IceSpiderEntity::new, EntityClassification.CREATURE)
-                    .size(1, 1)
-                    .setShouldReceiveVelocityUpdates(false)
-                    .build("icespider").setRegistryName(MODID, "icespider"));
+            event.getRegistry().register(MobEntities.ICESKELETON);
+            event.getRegistry().register(MobEntities.WEIRDMOB);
+            event.getRegistry().register(MobEntities.ICESPIDER);
             event.getRegistry().register(MobEntities.HYENA);
 
             MobEntities.registerEntityWorldSpawns();

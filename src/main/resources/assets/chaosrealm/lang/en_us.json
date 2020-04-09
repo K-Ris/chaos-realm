@@ -1,5 +1,14 @@
 {
   "itemGroup.chaosrealm": "Chaos Realm",
 
-  "item.chaosrealm.glasssword": "Glass Sword"
+  "item.chaosrealm.glasssword": "Glass Sword",
+  "item.chaosrealm.weirdmob_egg": "Weird Mob Egg",
+  "item.chaosrealm.icespider_egg": "Ice Spider Egg",
+  "item.chaosrealm.iceskeleton_egg": "Ice Skeleton Egg",
+  "item.chaosrealm.hyena_egg": "Hyena Egg",
+
+  "entity.chaosrealm.weirdmob": "Weirdmob",
+  "entity.chaosrealm.iceskeleton": "Ice Skeleton",
+  "entity.chaosrealm.iceSpider": "Ice Spider",
+  "entity.chaosrealm.hyena": "Hyena"
 }

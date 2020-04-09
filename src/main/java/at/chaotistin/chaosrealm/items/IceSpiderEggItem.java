@@ -1,7 +1,7 @@
 package at.chaotistin.chaosrealm.items;
 
 import at.chaotistin.chaosrealm.Main;
-import at.chaotistin.chaosrealm.entities.MobEntities;
+import at.chaotistin.chaosrealm.registries.MobEntities;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

@@ -1,6 +1,6 @@
 package at.chaotistin.chaosrealm.setup;
 
-import at.chaotistin.chaosrealm.items.ModItems;
+import at.chaotistin.chaosrealm.registries.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
