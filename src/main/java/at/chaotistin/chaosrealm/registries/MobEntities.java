@@ -1,10 +1,7 @@
 package at.chaotistin.chaosrealm.registries;
 
 import at.chaotistin.chaosrealm.Main;
-import at.chaotistin.chaosrealm.entities.HyenaEntity;
-import at.chaotistin.chaosrealm.entities.IceSkeletonEntity;
-import at.chaotistin.chaosrealm.entities.IceSpiderEntity;
-import at.chaotistin.chaosrealm.entities.WeirdMobEntity;
+import at.chaotistin.chaosrealm.entities.*;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.Biome;
@@ -39,6 +36,13 @@ public class MobEntities {
             .setShouldReceiveVelocityUpdates(false)
             .build("hyena")
             .setRegistryName(Main.MODID, "hyena");
+
+    @ObjectHolder("chaosrealm:gnoll")
+    public static EntityType<?> GNOLL = EntityType.Builder.create(GnollEntity::new, EntityClassification.CREATURE)
+            .size(1, 1)
+            .setShouldReceiveVelocityUpdates(false)
+            .build("hyena")
+            .setRegistryName(Main.MODID, "gnoll");
 
     public static void registerEntityWorldSpawns(){
         registerEntityWorldSpawn(HYENA, Biomes.SAVANNA, Biomes.SAVANNA_PLATEAU);

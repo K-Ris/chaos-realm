@@ -66,6 +66,7 @@ public class Main
             event.getRegistry().register(new WeirdMobEggItem());
             event.getRegistry().register(new IceSpiderEggItem());
             event.getRegistry().register(new HyenaEggItem());
+            event.getRegistry().register(new GnollEggItem());
         }
         @SubscribeEvent
         public static void onEntityRegistry(final RegistryEvent.Register<EntityType<?>> event) {
@@ -73,6 +74,7 @@ public class Main
             event.getRegistry().register(MobEntities.WEIRDMOB);
             event.getRegistry().register(MobEntities.ICESPIDER);
             event.getRegistry().register(MobEntities.HYENA);
+            event.getRegistry().register(MobEntities.GNOLL);
 
             MobEntities.registerEntityWorldSpawns();
 
