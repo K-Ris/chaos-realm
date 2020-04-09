@@ -13,7 +13,7 @@ import net.minecraft.util.ResourceLocation;
 public class HyenaRenderer extends MobRenderer<HyenaEntity, HyenaModel<HyenaEntity>> {
     private static final ResourceLocation WOLF_TEXTURES = new ResourceLocation(Main.MODID,"textures/entity/hyena.png");
     private static final ResourceLocation TAMED_WOLF_TEXTURES = new ResourceLocation(Main.MODID,"textures/entity/hyena.png");
-    private static final ResourceLocation ANGRY_WOLF_TEXTURES = new ResourceLocation(Main.MODID,"textures/entity/hyena.png");
+    private static final ResourceLocation ANGRY_WOLF_TEXTURES = new ResourceLocation(Main.MODID,"textures/entity/hyena_angry.png");
 
     public HyenaRenderer(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new HyenaModel<>(), 0.5F);

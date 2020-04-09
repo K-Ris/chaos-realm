@@ -1,0 +1,26 @@
+{
+  "entity.hyena.ambient":
+  {
+    "category": "entity",
+    "subtitle": "entity.hyena.ambient",
+    "sounds": [{"name": "chaosrealm:entity/hyena/ambient", "stream": true}]
+  },
+  "entity.hyena.hurt":
+  {
+    "category": "entity",
+    "subtitle": "entity.hyena.hurt",
+    "sounds": [{"name": "chaosrealm:entity/hyena/hurt", "stream": true}]
+  },
+  "entity.hyena.death":
+  {
+    "category": "entity",
+    "subtitle": "entity.hyena.death",
+    "sounds": [{"name": "chaosrealm:entity/hyena/death", "stream": true}]
+  },
+  "entity.hyena.growl":
+  {
+    "category": "entity",
+    "subtitle": "entity.hyena.growl",
+    "sounds": [{"name": "chaosrealm:entity/hyena/growl", "stream": true}]
+  }
+}
