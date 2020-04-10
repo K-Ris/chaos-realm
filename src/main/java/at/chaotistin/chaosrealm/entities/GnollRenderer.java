@@ -13,7 +13,7 @@ public class GnollRenderer extends BipedRenderer<GnollEntity, GnollModel<GnollEn
 
     public GnollRenderer(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new GnollModel<>(), 0.5F);
-        this.addLayer(new BipedArmorLayer<>(this, new ZombieModel(0.5F, true), new ZombieModel(1.0F, true)));
+        this.addLayer(new BipedArmorLayer<>(this, new GnollModel(), new GnollModel()));
     }
 
     protected ResourceLocation getEntityTexture(GnollEntity entity) {
