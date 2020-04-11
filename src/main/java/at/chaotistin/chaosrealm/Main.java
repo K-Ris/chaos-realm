@@ -5,6 +5,7 @@ import at.chaotistin.chaosrealm.proxy.ClientProxy;
 import at.chaotistin.chaosrealm.proxy.IProxy;
 import at.chaotistin.chaosrealm.proxy.ServerProxy;
 import at.chaotistin.chaosrealm.registries.MobEntities;
+import at.chaotistin.chaosrealm.registries.ModItems;
 import at.chaotistin.chaosrealm.registries.SoundsHandler;
 import at.chaotistin.chaosrealm.setup.ModSetup;
 import net.minecraft.entity.EntityType;
@@ -67,6 +68,7 @@ public class Main
             event.getRegistry().register(new IceSpiderEggItem());
             event.getRegistry().register(new HyenaEggItem());
             event.getRegistry().register(new GnollEggItem());
+            event.getRegistry().register(ModItems.FIREBALLSPELL);
         }
         @SubscribeEvent
         public static void onEntityRegistry(final RegistryEvent.Register<EntityType<?>> event) {

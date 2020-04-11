@@ -63,9 +63,6 @@ public class GnollEntity extends MonsterEntity {
         this.goalSelector.addGoal(7, new LookAtGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, MobEntity.class, 5, false, false, (p_213619_0_) -> {
-            return p_213619_0_ instanceof IMob && !(p_213619_0_ instanceof CreeperEntity);
-        }));
     }
 
 
