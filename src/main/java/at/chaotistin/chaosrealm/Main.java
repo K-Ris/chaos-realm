@@ -69,6 +69,7 @@ public class Main
             event.getRegistry().register(new PlatypunkEggItem());
             event.getRegistry().register(new HyenaEggItem());
             event.getRegistry().register(new GnollEggItem());
+            event.getRegistry().register(new StoneCrusherEggItem());
 
             event.getRegistry().register(ModItems.FIREBALLSPELL);
         }
@@ -80,6 +81,7 @@ public class Main
             event.getRegistry().register(MobEntities.HYENA);
             event.getRegistry().register(MobEntities.GNOLL);
             event.getRegistry().register(MobEntities.PLATYPUNK);
+            event.getRegistry().register(MobEntities.STONECRUSHER);
 
             MobEntities.registerEntityWorldSpawns();
 

@@ -51,6 +51,13 @@ public class MobEntities {
             .build("platypunk")
             .setRegistryName(Main.MODID, "platypunk");
 
+    @ObjectHolder("chaosrealm:stonecrusher")
+    public static EntityType<?> STONECRUSHER = EntityType.Builder.create(StoneCrusherEntity::new, EntityClassification.CREATURE)
+            .size(1, 1)
+            .setShouldReceiveVelocityUpdates(false)
+            .build("stonecrusher")
+            .setRegistryName(Main.MODID, "stonecrusher");
+
     public static void registerEntityWorldSpawns(){
         registerEntityWorldSpawn(HYENA, Biomes.SAVANNA, Biomes.SAVANNA_PLATEAU);
     }

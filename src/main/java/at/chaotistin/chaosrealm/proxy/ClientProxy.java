@@ -16,6 +16,7 @@ public class ClientProxy implements IProxy{
         RenderingRegistry.registerEntityRenderingHandler(HyenaEntity.class, HyenaRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(GnollEntity.class, GnollRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(PlatypunkEntity.class, PlatypunkRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(StoneCrusherEntity.class, StoneCrusherRenderer::new);
     }
 
     @Override
