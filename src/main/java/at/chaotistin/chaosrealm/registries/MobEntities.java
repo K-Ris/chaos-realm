@@ -41,8 +41,15 @@ public class MobEntities {
     public static EntityType<?> GNOLL = EntityType.Builder.create(GnollEntity::new, EntityClassification.CREATURE)
             .size(1, 1)
             .setShouldReceiveVelocityUpdates(false)
-            .build("hyena")
+            .build("gnoll")
             .setRegistryName(Main.MODID, "gnoll");
+
+    @ObjectHolder("chaosrealm:platypunk")
+    public static EntityType<?> PLATYPUNK = EntityType.Builder.create(PlatypunkEntity::new, EntityClassification.CREATURE)
+            .size(1, 1)
+            .setShouldReceiveVelocityUpdates(false)
+            .build("platypunk")
+            .setRegistryName(Main.MODID, "platypunk");
 
     public static void registerEntityWorldSpawns(){
         registerEntityWorldSpawn(HYENA, Biomes.SAVANNA, Biomes.SAVANNA_PLATEAU);

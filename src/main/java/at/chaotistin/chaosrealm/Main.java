@@ -77,6 +77,7 @@ public class Main
             event.getRegistry().register(MobEntities.ICESPIDER);
             event.getRegistry().register(MobEntities.HYENA);
             event.getRegistry().register(MobEntities.GNOLL);
+            event.getRegistry().register(MobEntities.PLATYPUNK);
 
             MobEntities.registerEntityWorldSpawns();
 
