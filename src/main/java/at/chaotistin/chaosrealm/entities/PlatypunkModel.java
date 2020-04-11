@@ -32,6 +32,7 @@ public class PlatypunkModel extends EntityModel<PlatypunkEntity> {
         tail.setRotationPoint(0.0F, 3.5F, 6.0F);
         body.addChild(tail);
         tail.cubeList.add(new ModelBox(tail, 26, 26, -1.0F, -1.0F, -1.0F, 2, 2, 14, 0.0F, false));
+        tail.cubeList.add(new ModelBox(tail, 26, 26, -1.0F, -1.0F, -1.0F, 2, 2, 14, 0.0F, false));
 
         head = new RendererModel(this);
         head.setRotationPoint(0.0F, 9.0F, 0.0F);
@@ -55,10 +56,12 @@ public class PlatypunkModel extends EntityModel<PlatypunkEntity> {
 
         arm_right = new RendererModel(this);
         arm_right.setRotationPoint(-6.0F, 16.5F, -3.5F);
+        setRotationAngle(arm_right, 0.0F, -0.9599F, -0.8727F);
         arm_right.cubeList.add(new ModelBox(arm_right, 44, 30, -7.0F, -1.5F, -1.5F, 8, 3, 3, 0.0F, false));
 
         arm_left = new RendererModel(this);
         arm_left.setRotationPoint(6.0F, 16.5F, -3.5F);
+        setRotationAngle(arm_left, 0.0F, 0.8727F, 0.8727F);
         arm_left.cubeList.add(new ModelBox(arm_left, 44, 24, -1.0F, -1.5F, -1.5F, 8, 3, 3, 0.0F, false));
 
         leg_right = new RendererModel(this);
@@ -68,6 +71,7 @@ public class PlatypunkModel extends EntityModel<PlatypunkEntity> {
         leg_left = new RendererModel(this);
         leg_left.setRotationPoint(5.0F, 23.0F, -2.0F);
         leg_left.cubeList.add(new ModelBox(leg_left, 36, 0, -2.0F, -1.0F, -6.0F, 5, 2, 8, 0.0F, false));
+
 
         //super.bipedHead = head;
         //super.bipedBody = body;
@@ -86,6 +90,12 @@ public class PlatypunkModel extends EntityModel<PlatypunkEntity> {
         arm_left.render(f5);
         leg_right.render(f5);
         leg_left.render(f5);
+    }
+
+    public void setRotationAngle(RendererModel modelRenderer, float x, float y, float z) {
+        modelRenderer.rotateAngleX = x;
+        modelRenderer.rotateAngleY = y;
+        modelRenderer.rotateAngleZ = z;
     }
 
     @Override

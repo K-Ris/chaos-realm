@@ -66,8 +66,10 @@ public class Main
             event.getRegistry().register(new IceSkeletonEggItem());
             event.getRegistry().register(new WeirdMobEggItem());
             event.getRegistry().register(new IceSpiderEggItem());
+            event.getRegistry().register(new PlatypunkEggItem());
             event.getRegistry().register(new HyenaEggItem());
             event.getRegistry().register(new GnollEggItem());
+
             event.getRegistry().register(ModItems.FIREBALLSPELL);
         }
         @SubscribeEvent
