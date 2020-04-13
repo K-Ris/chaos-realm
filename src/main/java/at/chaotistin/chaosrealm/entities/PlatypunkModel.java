@@ -82,6 +82,22 @@ public class PlatypunkModel extends EntityModel<PlatypunkEntity> {
 
     }
 
+    public void setLivingAnimations(PlatypunkEntity entityIn, float limbSwing, float limbSwingAmount, float partialTick) {
+
+        if (entityIn.isSitting()) {
+            setRotationAngle(leg_left, 0.0F, -0.8727F, 0.0F);
+            setRotationAngle(arm_left, -0.5236F, 2.269F, -0.6981F);
+            setRotationAngle(leg_right, 0.0F, 0.8727F, 0.0F);
+            setRotationAngle(arm_right, -0.5236F, -2.2689F, 0.6981F);
+        }
+        else{
+            setRotationAngle(leg_left, 0.0F, 0F, 0.0F);
+            setRotationAngle(arm_left, 0.0F, 0.8727F, 0.8727F);
+            setRotationAngle(arm_right, 0.0F, -0.9599F, -0.8727F);
+            setRotationAngle(leg_right, 0F, 0F, 0F);
+        }
+    }
+
     @Override
     public void render(PlatypunkEntity entity, float f, float f1, float f2, float f3, float f4, float f5) {
         body.render(f5);
