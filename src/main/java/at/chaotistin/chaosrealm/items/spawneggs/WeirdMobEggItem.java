@@ -1,4 +1,4 @@
-package at.chaotistin.chaosrealm.items;
+package at.chaotistin.chaosrealm.items.spawneggs;
 
 import at.chaotistin.chaosrealm.Main;
 import at.chaotistin.chaosrealm.registries.MobEntities;
@@ -19,12 +19,13 @@ import net.minecraft.world.spawner.AbstractSpawner;
 
 import java.util.Objects;
 
-public class PlatypunkEggItem extends Item {
-    public PlatypunkEggItem() {
+public class WeirdMobEggItem extends Item {
+
+    public WeirdMobEggItem() {
         super(new Item.Properties()
                 .maxStackSize(1)
                 .group(Main.setup.itemGroup));
-        setRegistryName("platypunk_egg");
+        setRegistryName("weirdmob_egg");
     }
 
     /**
@@ -45,7 +46,7 @@ public class PlatypunkEggItem extends Item {
                 TileEntity tileentity = world.getTileEntity(blockpos);
                 if (tileentity instanceof MobSpawnerTileEntity) {
                     AbstractSpawner abstractspawner = ((MobSpawnerTileEntity)tileentity).getSpawnerBaseLogic();
-                    abstractspawner.setEntityType(MobEntities.PLATYPUNK);
+                    abstractspawner.setEntityType(MobEntities.WEIRDMOB);
                     tileentity.markDirty();
                     world.notifyBlockUpdate(blockpos, blockstate, blockstate, 3);
                     itemstack.shrink(1);
@@ -60,11 +61,12 @@ public class PlatypunkEggItem extends Item {
                 blockpos1 = blockpos.offset(direction);
             }
 
-            if (MobEntities.PLATYPUNK.spawn(world, itemstack, context.getPlayer(), blockpos1, SpawnReason.SPAWN_EGG, true, !Objects.equals(blockpos, blockpos1) && direction == Direction.UP) != null) {
+            if (MobEntities.WEIRDMOB.spawn(world, itemstack, context.getPlayer(), blockpos1, SpawnReason.SPAWN_EGG, true, !Objects.equals(blockpos, blockpos1) && direction == Direction.UP) != null) {
                 itemstack.shrink(1);
             }
 
             return ActionResultType.SUCCESS;
         }
     }
+
 }

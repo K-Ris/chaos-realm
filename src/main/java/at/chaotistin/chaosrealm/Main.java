@@ -1,6 +1,7 @@
 package at.chaotistin.chaosrealm;
 
 import at.chaotistin.chaosrealm.items.*;
+import at.chaotistin.chaosrealm.items.spawneggs.*;
 import at.chaotistin.chaosrealm.proxy.ClientProxy;
 import at.chaotistin.chaosrealm.proxy.IProxy;
 import at.chaotistin.chaosrealm.proxy.ServerProxy;
@@ -8,16 +9,19 @@ import at.chaotistin.chaosrealm.registries.MobEntities;
 import at.chaotistin.chaosrealm.registries.ModItems;
 import at.chaotistin.chaosrealm.registries.SoundsHandler;
 import at.chaotistin.chaosrealm.setup.ModSetup;
+import at.chaotistin.chaosrealm.registries.ModStructures;
 import at.chaotistin.chaosrealm.world.structures.WorldGen;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -86,9 +90,13 @@ public class Main
             event.getRegistry().register(MobEntities.STONECRUSHER);
 
             MobEntities.registerEntityWorldSpawns();
-
         }
 
+        @SubscribeEvent
+        public static void registerStructures(RegistryEvent.Register<Feature<?>> event) {
 
+            //IForgeRegistry<Feature<?>> registry = event.getRegistry();
+            event.getRegistry().register(ModStructures.SWAMP_HUT_Test);
+        }
     }
 }

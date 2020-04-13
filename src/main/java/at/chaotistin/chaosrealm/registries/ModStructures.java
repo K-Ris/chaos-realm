@@ -1,6 +1,7 @@
-package at.chaotistin.chaosrealm.world.structures;
+package at.chaotistin.chaosrealm.registries;
 
 import at.chaotistin.chaosrealm.Main;
+import at.chaotistin.chaosrealm.world.structures.SwampHutTestStructure;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.feature.structure.Structure;
@@ -14,24 +15,14 @@ import net.minecraftforge.registries.ObjectHolder;
 import javax.annotation.Nonnull;
 import java.util.Locale;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder("chaosrealm")
 public class ModStructures {
 
     //public static final SwampHutStructure SWAMP_HUT = register("swamp_hut_test", new SwampHutTestStructure(NoFeatureConfig::deserialize));
 
+    @ObjectHolder("chaosrealm:swamp_hut_test")
     public static final Structure<NoFeatureConfig> SWAMP_HUT_Test = create("swamp_hut_test", new SwampHutTestStructure(NoFeatureConfig::deserialize));
 
-    @SubscribeEvent
-    public static void registerStructures(RegistryEvent.Register<Feature<?>> event) {
-        // Register Pieces
-        //ModStructurePieces.registerPieces();
 
-        // Register Structures
-        IForgeRegistry<Feature<?>> registry = event.getRegistry();
-
-        registry.register(SWAMP_HUT_Test);
-    }
 
     private static @Nonnull
     <T extends Feature<?>> T create(String name, T feature) {

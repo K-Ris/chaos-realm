@@ -1,5 +1,6 @@
 package at.chaotistin.chaosrealm.world.structures;
 
+import at.chaotistin.chaosrealm.registries.ModStructures;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStage;

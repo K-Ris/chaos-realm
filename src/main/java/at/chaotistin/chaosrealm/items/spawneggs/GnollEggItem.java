@@ -1,4 +1,4 @@
-package at.chaotistin.chaosrealm.items;
+package at.chaotistin.chaosrealm.items.spawneggs;
 
 import at.chaotistin.chaosrealm.Main;
 import at.chaotistin.chaosrealm.registries.MobEntities;
@@ -9,6 +9,7 @@ import net.minecraft.entity.SpawnReason;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
+import net.minecraft.item.Items;
 import net.minecraft.tileentity.MobSpawnerTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
@@ -19,12 +20,12 @@ import net.minecraft.world.spawner.AbstractSpawner;
 
 import java.util.Objects;
 
-public class IceSkeletonEggItem extends Item {
-    public IceSkeletonEggItem() {
+public class GnollEggItem extends Item {
+    public GnollEggItem() {
         super(new Item.Properties()
                 .maxStackSize(1)
                 .group(Main.setup.itemGroup));
-        setRegistryName("iceskeleton_egg");
+        setRegistryName("gnoll_egg");
     }
 
     /**
@@ -45,7 +46,7 @@ public class IceSkeletonEggItem extends Item {
                 TileEntity tileentity = world.getTileEntity(blockpos);
                 if (tileentity instanceof MobSpawnerTileEntity) {
                     AbstractSpawner abstractspawner = ((MobSpawnerTileEntity)tileentity).getSpawnerBaseLogic();
-                    abstractspawner.setEntityType(MobEntities.ICESKELETON);
+                    abstractspawner.setEntityType(MobEntities.GNOLL);
                     tileentity.markDirty();
                     world.notifyBlockUpdate(blockpos, blockstate, blockstate, 3);
                     itemstack.shrink(1);
@@ -60,7 +61,7 @@ public class IceSkeletonEggItem extends Item {
                 blockpos1 = blockpos.offset(direction);
             }
 
-            if (MobEntities.ICESKELETON.spawn(world, itemstack, context.getPlayer(), blockpos1, SpawnReason.SPAWN_EGG, true, !Objects.equals(blockpos, blockpos1) && direction == Direction.UP) != null) {
+            if (MobEntities.GNOLL.spawn(world, itemstack, context.getPlayer(), blockpos1, SpawnReason.SPAWN_EGG, true, !Objects.equals(blockpos, blockpos1) && direction == Direction.UP) != null) {
                 itemstack.shrink(1);
             }
 

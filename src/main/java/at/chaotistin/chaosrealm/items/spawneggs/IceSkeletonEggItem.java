@@ -1,4 +1,4 @@
-package at.chaotistin.chaosrealm.items;
+package at.chaotistin.chaosrealm.items.spawneggs;
 
 import at.chaotistin.chaosrealm.Main;
 import at.chaotistin.chaosrealm.registries.MobEntities;
@@ -19,12 +19,12 @@ import net.minecraft.world.spawner.AbstractSpawner;
 
 import java.util.Objects;
 
-public class IceSpiderEggItem extends Item{
-    public IceSpiderEggItem() {
+public class IceSkeletonEggItem extends Item {
+    public IceSkeletonEggItem() {
         super(new Item.Properties()
                 .maxStackSize(1)
                 .group(Main.setup.itemGroup));
-        setRegistryName("icespider_egg");
+        setRegistryName("iceskeleton_egg");
     }
 
     /**
@@ -45,7 +45,7 @@ public class IceSpiderEggItem extends Item{
                 TileEntity tileentity = world.getTileEntity(blockpos);
                 if (tileentity instanceof MobSpawnerTileEntity) {
                     AbstractSpawner abstractspawner = ((MobSpawnerTileEntity)tileentity).getSpawnerBaseLogic();
-                    abstractspawner.setEntityType(MobEntities.ICESPIDER);
+                    abstractspawner.setEntityType(MobEntities.ICESKELETON);
                     tileentity.markDirty();
                     world.notifyBlockUpdate(blockpos, blockstate, blockstate, 3);
                     itemstack.shrink(1);
@@ -60,7 +60,7 @@ public class IceSpiderEggItem extends Item{
                 blockpos1 = blockpos.offset(direction);
             }
 
-            if (MobEntities.ICESPIDER.spawn(world, itemstack, context.getPlayer(), blockpos1, SpawnReason.SPAWN_EGG, true, !Objects.equals(blockpos, blockpos1) && direction == Direction.UP) != null) {
+            if (MobEntities.ICESKELETON.spawn(world, itemstack, context.getPlayer(), blockpos1, SpawnReason.SPAWN_EGG, true, !Objects.equals(blockpos, blockpos1) && direction == Direction.UP) != null) {
                 itemstack.shrink(1);
             }
 
