@@ -8,6 +8,7 @@ import at.chaotistin.chaosrealm.registries.MobEntities;
 import at.chaotistin.chaosrealm.registries.ModItems;
 import at.chaotistin.chaosrealm.registries.SoundsHandler;
 import at.chaotistin.chaosrealm.setup.ModSetup;
+import at.chaotistin.chaosrealm.world.structures.WorldGen;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.util.SoundEvent;
@@ -50,6 +51,7 @@ public class Main
     {
         setup.init();
         proxy.init();
+        WorldGen.setupWorldGen();
     }
 
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
@@ -86,6 +88,7 @@ public class Main
             MobEntities.registerEntityWorldSpawns();
 
         }
+
 
     }
 }

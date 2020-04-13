@@ -32,9 +32,8 @@ public class GnollEntity extends MonsterEntity {
 //    private int randomSoundDelay;
 //    private UUID angerTargetUUID;
 
-    public GnollEntity(EntityType<? extends MonsterEntity> p_i50199_1_, World p_i50199_2_) {
-        super(p_i50199_1_, p_i50199_2_);
-        //this.setPathPriority(PathNodeType.LAVA, 8.0F);
+    public GnollEntity(EntityType<? extends GnollEntity> p_i50194_1_, World p_i50194_2_) {
+        super(p_i50194_1_, p_i50194_2_);
     }
 
 //    public void setRevengeTarget(@Nullable LivingEntity livingBase) {
