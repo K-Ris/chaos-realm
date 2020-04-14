@@ -98,5 +98,6 @@ public class Main
             //IForgeRegistry<Feature<?>> registry = event.getRegistry();
             event.getRegistry().register(ModStructures.SWAMP_HUT_Test);
         }
+
     }
 }

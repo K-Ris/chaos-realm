@@ -23,20 +23,20 @@ public class HyenaModel <T extends HyenaEntity> extends EntityModel<T> {
         textureHeight = 64;
 
         head = new RendererModel(this);
-        head.setRotationPoint(0.0F, 13.5F, -7.0F);
-        head.cubeList.add(new ModelBox(head, 20, 24, -4.0F, -3.0F, -2.0F, 6, 6, 4, 0.0F, false));
-        head.cubeList.add(new ModelBox(head, 18, 13, 1.0F, -5.0F, 0.0F, 2, 3, 1, 0.0F, false));
-        head.cubeList.add(new ModelBox(head, 0, 0, -5.0F, -5.0F, 0.0F, 2, 3, 1, 0.0F, false));
-        head.cubeList.add(new ModelBox(head, 23, 0, -2.5F, -0.02F, -5.0F, 3, 3, 4, 0.0F, false));
+        head.setRotationPoint(0.0F, 14.0F, -7.0F);
+        head.cubeList.add(new ModelBox(head, 20, 24, -4.0F, -2.5F, -3.0F, 6, 5, 6, 0.0F, false));
+        head.cubeList.add(new ModelBox(head, 18, 13, 1.0F, -4.5F, 0.0F, 2, 3, 1, 0.0F, false));
+        head.cubeList.add(new ModelBox(head, 0, 0, -5.0F, -4.5F, 0.0F, 2, 3, 1, 0.0F, false));
+        head.cubeList.add(new ModelBox(head, 23, 0, -2.5F, 0.48F, -6.0F, 3, 2, 3, 0.0F, false));
 
         body = new RendererModel(this);
         body.setRotationPoint(-2.0F, 14.0F, 2.0F);
-        body.cubeList.add(new ModelBox(body, 0, 13, -4.0F, -2.0F, -3.0F, 6, 9, 6, 0.0F, false));
+        body.cubeList.add(new ModelBox(body, 0, 13, -3.0F, -2.0F, -3.0F, 4, 9, 6, 0.0F, false));
 
         mane = new RendererModel(this);
         mane.setRotationPoint(0.0F, 14.0F, 2.0F);
-        mane.cubeList.add(new ModelBox(mane, 0, 0, -4.0F, -3.0F, -3.0F, 8, 6, 7, 0.0F, false));
-        mane.cubeList.add(new ModelBox(mane, 0, 10, 0.0F, -3.0F, 4.0F, 0, 6, 3, 0.0F, false));
+        mane.cubeList.add(new ModelBox(mane, 0, 0, -3.0F, -3.0F, -3.0F, 6, 6, 6, 0.0F, false));
+        mane.cubeList.add(new ModelBox(mane, 0, 10, 0.0F, -2.0F, 3.0F, 0, 6, 3, 0.0F, false));
 
         leg1 = new RendererModel(this);
         leg1.setRotationPoint(1.5F, 16.0F, 7.0F);
